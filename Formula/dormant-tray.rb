@@ -1,25 +1,25 @@
 class DormantTray < Formula
   desc "KDE StatusNotifierItem tray applet for monitoring and controlling dormantd."
   homepage "https://github.com/legion-works/dormant"
-  version "0.4.0"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormant-tray-aarch64-apple-darwin.tar.xz"
-      sha256 "09fac2e02ed70bf45a3b5fc82c5f236286e549e301efd9509d12b5a9a9d733b0"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormant-tray-aarch64-apple-darwin.tar.xz"
+      sha256 "eb352e72706fe066d1a3ad444dee25db86af05571b596a7aada4b087094ca90d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormant-tray-x86_64-apple-darwin.tar.xz"
-      sha256 "1c8d7cad4d1dd3d5bff46f2fb33333bff6fa346be19fbc99e479f220a1eaf3b8"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormant-tray-x86_64-apple-darwin.tar.xz"
+      sha256 "3dd8667da3b0e3c0220ba4264f5b3a5eac670784cb621197284dea59c125f83e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormant-tray-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2f123c57056ce501bf7601c37edc4ea6594948c1961ec8c42054fab1a86c24a9"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormant-tray-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5fa85ba33b0a79ac37cb039d0d2d3522f6f2ced865f60525bb86c89c2eb11d0f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormant-tray-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b78871f1fffad1f76b4d989716f90b431cb50e673d050852f032e112ce9cba28"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormant-tray-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "19b37cdf39f906a4258130fa9994f7a5c07299b2f2e3da554d1fb3290a52534a"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
