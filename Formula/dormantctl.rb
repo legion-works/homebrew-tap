@@ -1,25 +1,25 @@
 class Dormantctl < Formula
   desc "CLI and IPC client library for controlling and diagnosing dormant."
   homepage "https://github.com/legion-works/dormant"
-  version "0.4.0"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormantctl-aarch64-apple-darwin.tar.xz"
-      sha256 "6b65c20c3942cdbd4b11126b224eec958add10da9420f9f1725426d14a2ab923"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormantctl-aarch64-apple-darwin.tar.xz"
+      sha256 "57f6b472bd4382ef16f82093c36604d5e130dc06c5aa99e6dc13b6c30f6b4b25"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormantctl-x86_64-apple-darwin.tar.xz"
-      sha256 "812f3b33abb9c4ce31c41a58665c0908685fdca5e1a6025bd3bfa1e4e16118ed"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormantctl-x86_64-apple-darwin.tar.xz"
+      sha256 "7324b14fe9aa62502ac34c3994c3501a4260eab0460869c20cd792558331a074"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "47b9f925a3f8cb75ef7d813cfdc966ce674ab27ba62a91d93a980bfe667b94aa"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bf4277abda477f31b99a6b66e9a35e245d33a32905b6f23694476025abb6dcac"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.4.0/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a834c0153110af8c6101e500ed5b569af707297ed8f8611985d5162a02cb225b"
+      url "https://github.com/legion-works/dormant/releases/download/v0.5.0/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6413c7abe7f881bdbc6400301bdfab08a5102f794e06635d78757b7d0bbbde3e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
