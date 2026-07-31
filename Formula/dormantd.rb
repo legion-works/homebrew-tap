@@ -1,25 +1,25 @@
 class Dormantd < Formula
   desc "Daemon binary for proximity-driven display blanking and wake control."
   homepage "https://github.com/legion-works/dormant"
-  version "0.9.2"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantd-aarch64-apple-darwin.tar.xz"
-      sha256 "a245a42a12869858b944713d8ef0bbcb07b28f85bf9bf02e7e09487a7a2277d6"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantd-aarch64-apple-darwin.tar.xz"
+      sha256 "8cd72a41be9ef36bccc5c8cf18da06291ae5b35603ced27b02213240963e25e4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantd-x86_64-apple-darwin.tar.xz"
-      sha256 "1d3ed7a970e02e6f87da046148ac7b3e88b0ac750a3993a0f403eccb2ad4124f"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantd-x86_64-apple-darwin.tar.xz"
+      sha256 "58622687dfa1fa74faa584d19c2e28810803ff0260ab1f0e7fb3a829b1c30dc3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "eaa4cafb2c889985f17ddf37c70c5f6eb445058f69bfba24ffeed71fa08503ce"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "252d972a72fa549034af1c88e6bc261f442ac5e12471a9ba75aa530d5d28a81f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e56e0de23bc961d8281cea17e0414cb0e824d032b4862a66732718449688ccaa"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "198b08f81bfc412b1eef5c16c69d8b0d2f34975bcc5fe39bc405110608ef1115"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
