@@ -1,25 +1,25 @@
 class DormantTray < Formula
   desc "KDE StatusNotifierItem tray applet for monitoring and controlling dormantd."
   homepage "https://github.com/legion-works/dormant"
-  version "0.9.2"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormant-tray-aarch64-apple-darwin.tar.xz"
-      sha256 "15f296758ed7ebb2d465fe42ecdc1f10564d0decb0a66012171063ee3e1b2242"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormant-tray-aarch64-apple-darwin.tar.xz"
+      sha256 "89d5a78d68e5c79fa1986013c2ab361448cf37e21dffec46467a8a9b66522a35"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormant-tray-x86_64-apple-darwin.tar.xz"
-      sha256 "fe7b4c163224d26462d2772f1064572b08fa233c075ecbd092920b8264b8d64a"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormant-tray-x86_64-apple-darwin.tar.xz"
+      sha256 "ef4f87440dc74b4c87a1fb577b676dbe39f37e7b58f6f73825b53b874de25156"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormant-tray-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "96b76ca91b6ede918dbf9e381c2e096893ab964d00826df712cb11a10f7568f3"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormant-tray-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b0b84a11f590ba713f1ea151c100b18df7cf894d3255a79fd97f9261dc34af1c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormant-tray-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1ab757ec46a6afe7c385438ccb00fd8dbfe6c135e7a9c22aa27924d5a94e2701"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormant-tray-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "df21d34728a33071007ff333bab3e882eaf56a9300450031964529cb26e59ec2"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
