@@ -1,25 +1,25 @@
 class Dormantctl < Formula
   desc "CLI and IPC client library for controlling and diagnosing dormant."
   homepage "https://github.com/legion-works/dormant"
-  version "0.9.2"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantctl-aarch64-apple-darwin.tar.xz"
-      sha256 "dc4f6bd1923151dabb8ebf2c92d0e3d680da43c006bfb57fc90cddefc730eaeb"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-aarch64-apple-darwin.tar.xz"
+      sha256 "5c91250cb245d7058437170aad34603ab14f9ea7851624ae1d4c46309cc2e29f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantctl-x86_64-apple-darwin.tar.xz"
-      sha256 "179e07260759d2e941b338696d44ec385c912ce1ebee2a73cab0ff9467f26cfa"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-x86_64-apple-darwin.tar.xz"
+      sha256 "8ed18ba2d480f0973576fe9374fefcde570161cf0c35b56fcb46dbaff54286d0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "07242415bf7cfd7c12d657cab1fb629b44e8218688f424f1d0e5aa008bd930e5"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d08d58067f11531f7d9632831451a803dae0c25e373ffcab6ef2a50fca514dcd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.9.2/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "aef7ebaa2a15079603abcdd972e9960590cec92843f38c3b8d3ee36d92a1449a"
+      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3fde4308b5649121809725cefa6f53a84d74948ab7adcdc17ad328c38213a794"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
