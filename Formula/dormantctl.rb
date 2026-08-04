@@ -1,25 +1,25 @@
 class Dormantctl < Formula
   desc "CLI and IPC client library for controlling and diagnosing dormant."
   homepage "https://github.com/legion-works/dormant"
-  version "0.10.0"
+  version "0.11.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-aarch64-apple-darwin.tar.xz"
-      sha256 "5c91250cb245d7058437170aad34603ab14f9ea7851624ae1d4c46309cc2e29f"
+      url "https://github.com/legion-works/dormant/releases/download/v0.11.0/dormantctl-aarch64-apple-darwin.tar.xz"
+      sha256 "57a2462616e513dbc408abb3929b6ef783cecd77c3219ccdeb6da73eba0acee9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-x86_64-apple-darwin.tar.xz"
-      sha256 "8ed18ba2d480f0973576fe9374fefcde570161cf0c35b56fcb46dbaff54286d0"
+      url "https://github.com/legion-works/dormant/releases/download/v0.11.0/dormantctl-x86_64-apple-darwin.tar.xz"
+      sha256 "cb66e9c4858532288aaf0917d2ab5002b4524cc80425737f1f18b2c2fe68c95c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d08d58067f11531f7d9632831451a803dae0c25e373ffcab6ef2a50fca514dcd"
+      url "https://github.com/legion-works/dormant/releases/download/v0.11.0/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "92c0f8d0682df18eeca3d5adac435b2536628b77e48e502d3ddc2f06b8f33889"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.10.0/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3fde4308b5649121809725cefa6f53a84d74948ab7adcdc17ad328c38213a794"
+      url "https://github.com/legion-works/dormant/releases/download/v0.11.0/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c4e2bbb740d242080f14613256b81c67d5f8dafa2040fd9e49dcc6b771e94206"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
