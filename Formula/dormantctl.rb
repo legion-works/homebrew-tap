@@ -1,25 +1,25 @@
 class Dormantctl < Formula
   desc "CLI and IPC client library for controlling and diagnosing dormant."
   homepage "https://github.com/legion-works/dormant"
-  version "0.12.2"
+  version "0.12.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantctl-aarch64-apple-darwin.tar.xz"
-      sha256 "14bebfa77afc033c1ad9959dac774244d91eeb35528dd2144d02627bfca0df99"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantctl-aarch64-apple-darwin.tar.xz"
+      sha256 "b9f721c07c52dfbe7e1b3b760a459e9f330a01c349e19eab086ffac70a80465b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantctl-x86_64-apple-darwin.tar.xz"
-      sha256 "a25cffac9f0704e50a8d1925956eb07796fa42e2b7e421da07a0c9a577cb1f4f"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantctl-x86_64-apple-darwin.tar.xz"
+      sha256 "2f76d34e8de35186c8c98f4c18eea2f8d2e896fa31cfc1a9c51867fb0cb1e344"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "32e0ed09e945cbc739c1445d9d823be7f1cac238fab87c9d36fc71f5cd35c660"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantctl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8864ef1a388c1cad0ef2f34feed169ca4238657cae66914cc65d5a4824cf5466"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "91f28d3a963de662ff8f8d1568aa82fac394933398192ffc69e940ce22483784"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantctl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "480163137dc92ac2e350cae95d78f28365e9ce2e8d713746009dc6ff73a9fac3"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,18 @@ class Dormantctl < Formula
   end
 
   def install
-    bin.install "dormantctl" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dormantctl" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dormantctl" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dormantctl" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dormantctl"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dormantctl"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dormantctl"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dormantctl"
+    end
 
     install_binary_aliases!
 
