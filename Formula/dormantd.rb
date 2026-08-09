@@ -1,25 +1,25 @@
 class Dormantd < Formula
   desc "Daemon binary for proximity-driven display blanking and wake control."
   homepage "https://github.com/legion-works/dormant"
-  version "0.12.2"
+  version "0.12.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantd-aarch64-apple-darwin.tar.xz"
-      sha256 "9574b649068163f2c05f9c6c292f92b88c2be6d8288d5e1916a9e8dd555e24fb"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantd-aarch64-apple-darwin.tar.xz"
+      sha256 "30dbd204a52debdbba2905db0c3200885efcf746e221f38e196140d2bb1d6d8b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantd-x86_64-apple-darwin.tar.xz"
-      sha256 "0e36aeacb07da084f2abab7bb32e06acc9c619497e678faa2b154da88605bdaa"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantd-x86_64-apple-darwin.tar.xz"
+      sha256 "2200ed8cd54f528c9cc7f949a2e3b4b2f15a92e711cf0e525b1866a4443c121a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4ec6dabe0bfa0ef49a867a0c87b184964b78b3ab7abe8ace3f5555357f0cf4f6"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "11ae959f5e3078dc8d2ba507d817655d1b1625d7b7a71d0b80dbbf874c0db205"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.2/dormantd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9b754496b5f0de8346d5fc2bb0da37d30e9bb54a44ae955118e190c433e069bf"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormantd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7004bcb4a57df4e51fd2d50175fcc5d924187907f8bec6528b9fb9c9eaa90bb1"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,18 @@ class Dormantd < Formula
   end
 
   def install
-    bin.install "dormantd" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dormantd" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dormantd" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dormantd" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dormantd"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dormantd"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dormantd"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dormantd"
+    end
 
     install_binary_aliases!
 
