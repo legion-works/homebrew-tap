@@ -1,25 +1,25 @@
 class DormantTray < Formula
   desc "KDE StatusNotifierItem tray applet for monitoring and controlling dormantd."
   homepage "https://github.com/legion-works/dormant"
-  version "0.12.3"
+  version "0.12.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormant-tray-aarch64-apple-darwin.tar.xz"
-      sha256 "96edb6676c250a088739e3fa49576190f58d17724299b9ef0eb51386c165f681"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.4/dormant-tray-aarch64-apple-darwin.tar.xz"
+      sha256 "df986c079026c606e3e328602db50bd252201b263eeedbcfc9cb61ecb2146239"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormant-tray-x86_64-apple-darwin.tar.xz"
-      sha256 "f7aa59838f83b34d4a81f61500575817a8882ad5b7a1018bbe551aaed326afa7"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.4/dormant-tray-x86_64-apple-darwin.tar.xz"
+      sha256 "b0b859d00f97aa0bbce72c14d823affdb28885d28659049a338e79ff6da6fd41"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormant-tray-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d39458e3ab5ad506407f702c9a5861a71157d4f1f0e11d25b814b355138ff4f5"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.4/dormant-tray-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "13d4af43290c118c8cfb787820c5515fd5ab2d2126feb49f777234599dcd5e55"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/legion-works/dormant/releases/download/v0.12.3/dormant-tray-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6391b72977ea51b83badf3a6e8ef0340cbb71ccd4470b8d520df8e729de409c1"
+      url "https://github.com/legion-works/dormant/releases/download/v0.12.4/dormant-tray-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b428199c51ae8c95fd793d7452174628c485a4d604526cdf6ef34c04bf3a428b"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,18 @@ class DormantTray < Formula
   end
 
   def install
-    bin.install "dormant-tray" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dormant-tray" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dormant-tray" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dormant-tray" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dormant-tray"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dormant-tray"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dormant-tray"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dormant-tray"
+    end
 
     install_binary_aliases!
 
